@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Segredo de Ordep</title>
+<style>
+  :root { --blood:#a20e22; --dim:#6c101b; --paper:#d6c7b3; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; color:var(--paper);
+    background: radial-gradient(ellipse at center, #1a1518 0%, #09080a 62%, #030304 100%);
+    font-family: Georgia, 'Times New Roman', serif; overflow-x:hidden;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; opacity:.14;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
+  }
+  main { width:min(900px, 92vw); margin:auto; padding:36px 0 60px; text-align:center; }
+  .eyebrow { font: .72rem/1.5 monospace; letter-spacing:.35em; color:#7b7370; text-transform:uppercase; }
+  h1 { margin:14px auto 8px; max-width:760px; color:#c7b5a2; font-size:clamp(1.35rem, 4vw, 2.5rem); font-weight:normal; line-height:1.45; text-shadow:0 0 18px #5e0b16; }
+  h1 em { color:#ad1c30; font-style:normal; }
+  .symbol { width:min(390px, 83vw); margin:12px auto 8px; filter:drop-shadow(0 0 10px #690916); }
+  .intro { color:#8f8581; font-size:.92rem; letter-spacing:.06em; }
+  .rule { height:1px; width:min(500px, 80%); margin:34px auto; background:linear-gradient(90deg,transparent,#6e1722,transparent); }
+  .message-wrap { position:relative; margin:0 auto; padding:22px 16px 26px; max-width:690px; border:1px solid #3a2025; background:rgba(13,10,12,.72); box-shadow:0 0 35px #000; }
+  .label { font: .68rem monospace; letter-spacing:.28em; color:#6d5253; margin-bottom:22px; }
+  .fragments { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:9px 12px; }
+  .fragment { display:inline-block; color:#c9b8a7; font-size:clamp(1rem,3.3vw,1.55rem); padding:3px 5px; background:#171114; border-bottom:1px solid #6e1722; transform:rotate(var(--r)); animation:flicker 6s infinite; animation-delay:var(--d); }
+  .fragment:nth-child(3n) { color:#8d7a79; }
+  .fragment:nth-child(4n) { text-shadow:2px 0 #761324,-1px 0 #1a6b60; }
+  .fragment .missing { color:#4b1b24; }
+  @keyframes flicker { 0%,93%,96%,100%{opacity:1} 94%{opacity:.3} 95%{opacity:.8} }
+  .hint { margin:18px 0 0; color:#63595a; font: .72rem monospace; letter-spacing:.08em; }
+  .cipher { max-width:520px; margin:0 auto; padding:20px; border:1px dashed #392027; color:#55474a; font: .85rem/1.9 monospace; letter-spacing:.22em; }
+  .cipher span { color:#8c1b2b; }
+  footer { margin-top:42px; color:#43383a; font: .65rem monospace; letter-spacing:.2em; }
+  @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation:none!important; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">registro encontrado · arquivo 03</div>
+  <h1>Um espírito raivoso e vingativo sussurra em nossos ouvidos,<br>mas às vezes ele <em>grita...</em></h1>
+  <svg class="symbol" viewBox="0 0 400 400" role="img" aria-label="Símbolo ritualístico geométrico em vermelho">
+    <defs><radialGradient id="glow"><stop stop-color="#8e1023" stop-opacity=".16"/><stop offset="1" stop-color="#050405" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="200" cy="200" r="190" fill="url(#glow)"/>
+    <g fill="none" stroke="#8d1425" stroke-width="1.7" opacity=".92">
+      <circle cx="200" cy="200" r="156"/><circle cx="200" cy="200" r="145"/>
+      <polygon points="200,48 342,248 58,248"/>
+      <polygon points="200,352 58,152 342,152"/>
+      <circle cx="200" cy="200" r="98" stroke-dasharray="3 7"/>
+      <path d="M200 28 V372 M28 200 H372" opacity=".35"/>
+    </g>
+    <g fill="#a21b2e" font-family="Georgia,serif" font-size="18" text-anchor="middle">
+      <text x="200" y="24">✦</text><text x="200" y="390">✦</text><text x="17" y="206">✦</text><text x="383" y="206">✦</text>
+    </g>
+    <circle cx="200" cy="200" r="4" fill="#bd2637"/>
+  </svg>
+  <p class="intro">Nem todo sussurro vem de quem está presente.</p>
+  <div class="rule"></div>
+  <section class="message-wrap" aria-label="Mensagem fragmentada">
+    <div class="label">TRANSCRIÇÃO DANIFICADA // NÃO CONFIÁVEL</div>
+    <div class="fragments" aria-label="O amigo Ordep esconde um segredo">
+      <span class="fragment" style="--r:-2deg;--d:.2s">O ami<span class="missing">g</span>o</span>
+      <span class="fragment" style="--r:1deg;--d:1.1s">Or—</span>
+      <span class="fragment" style="--r:-1deg;--d:.5s">dep</span>
+      <span class="fragment" style="--r:2deg;--d:1.8s">escon</span>
+      <span class="fragment" style="--r:-3deg;--d:.9s">de um</span>
+      <span class="fragment" style="--r:1deg;--d:1.4s">seg...</span>
+      <span class="fragment" style="--r:-1deg;--d:2s">redo.</span>
+    </div>
+    <p class="hint">[ alguns fragmentos parecem ter sido removidos ]</p>
+  </section>
+  <div class="rule"></div>
+  <div class="label">ANEXO // SEQUÊNCIA INCOMPLETA</div>
+  <div class="cipher" aria-label="Espaço reservado para código futuro">
+    <span>??</span> &nbsp;—&nbsp; 03 : 15 : <span>??</span><br>
+    <span>_ _ _ _ _ _</span><br>
+    <small style="letter-spacing:.08em;color:#44383b">o terceiro registro ainda não foi decifrado</small>
+  </div>
+  <footer>FIM DO REGISTRO · SE VOCÊ LEU, ELE TAMBÉM LEU</footer>
+</main>
+</body>
+</html>
